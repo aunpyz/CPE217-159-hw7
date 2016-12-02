@@ -38,36 +38,36 @@ public class Main {
         market.addStock("BTS", 8.35);
         market.addStock("DTAC", 35.50);
         market.addStock("LH", 8.75);
-        
-        market.showStockOwnership();
-        // Investors spent half of their money to randomly buy stocks from companies (IPO).
-        market.simulateIPO(); //
-        //market.loadSavedIPO(); // load simulatedIPO
-        market.showStockOwnership();
-        
-        market.portfolio("Darunphop");
-        market.portfolio("Aunnop");
+
+//        market.showStockOwnership();
+//        // Investors spent half of their money to randomly buy stocks from companies (IPO).
+//        //market.simulateIPO(); //
+        market.loadSavedIPO(); // load simulatedIPO
+//        market.showStockOwnership();
+//
+//        market.portfolio("Darunphop");
+//        market.portfolio("Aunnop");
         
         
         // To uncomment below, you need to implement Heap
-        /*
+
         
         market.submitSellOrder("Pimukthee", "SCB", 5, 200);
         market.submitSellOrder("Supakarn", "SCB", 10, 180);
-        //market.quote("SCB");
-        
+        market.quote("SCB");
+
         market.submitBuyOrder("Uttakran", "SCB", 6, 250);
         market.submitBuyOrder("Potsawat", "SCB", 6, 250);
-        
-        //market.portfolio("Uttakran");
-        //market.portfolio("Potsawat");
-        //market.portfolio("Pimukthee");
-        //market.portfolio("Supakarn");
-        
+
+        market.portfolio("Uttakran");
+        market.portfolio("Potsawat");
+        market.portfolio("Pimukthee");
+        market.portfolio("Supakarn");
+
         market.quote("KBANK");
         market.submitBuyOrder("Suttawee", "KBANK", 2, 90);
         market.quote("KBANK");
-        
+
         market.submitBuyOrder("Supakarn", "KBANK", 1, 85);
         market.quote("KBANK");
 
@@ -77,15 +77,15 @@ public class Main {
         market.quote("KBANK");
         market.submitBuyOrder("Kawewut", "KBANK", 2, 80);
         market.quote("KBANK");
-        
+
 
         market.submitSellOrder("Uttakran", "KBANK", 2, 150);
         market.quote("KBANK");
-        
+
         market.submitSellOrder("Uttakran", "KBANK", 6, 85);
-        
+
         market.portfolio("Uttakran");
-        
+
         market.showStockOwnership();
 
         market.submitSellOrder("Darunphop", "PTT", 3, 350);
@@ -97,45 +97,44 @@ public class Main {
         market.submitSellOrder("Potsawat", "PTT", 3, 360);
         market.submitSellOrder("Potsawat", "PTT", 3, 370);
         market.submitSellOrder("Potsawat", "PTT", 4, 380);
-        
+
         market.submitBuyOrder("Aunnop", "PTT", 6, 370);
         market.submitBuyOrder("Uttakran", "PTT", 6, 370);
         market.submitBuyOrder("Suttawee", "PTT", 10, 370);
         market.submitBuyOrder("Supakarn", "PTT", 10, 370);
-        
+
         market.submitBuyOrder("Tanin", "PTT", 2, 330);
         market.submitBuyOrder("Tanin", "PTT", 2, 300);
         market.submitBuyOrder("Tanin", "PTT", 2, 270);
-        
+
         market.submitBuyOrder("Theerapat", "PTT", 3, 330);
         market.submitBuyOrder("Theerapat", "PTT", 3, 250);
         market.submitBuyOrder("Theerapat", "PTT", 3, 200);
-        
+
         market.submitSellOrder("Kawewut", "PTT", 3, 320);
         market.submitSellOrder("Kawewut", "PTT", 3, 240);
         market.submitSellOrder("Kawewut", "PTT", 4, 220);
         market.submitSellOrder("Aunnop", "PTT", 3, 320);
         market.submitSellOrder("Aunnop", "PTT", 3, 240);
         market.submitSellOrder("Aunnop", "PTT", 4, 220);
-        
+
         market.quote("PTT");
         market.showStockOwnership();
-        
+
         market.portfolio("Aunnop");
-        
+
         market.submitBuyOrder("Darunphop", "PTT", 20, 150);
         market.submitBuyOrder("Darunphop", "PTT", 20, 100);
         market.submitBuyOrder("Darunphop", "PTT", 10, 50);
-        
+
         market.submitSellOrder("Suttawee", "PTT", 10, 125);
         market.submitSellOrder("Supakarn", "PTT", 10, 75);
         market.submitSellOrder("Tanin", "PTT", 15, 75);
         market.submitSellOrder("Theerapat", "PTT", 15, 75);
-        
+
         market.quote("PTT");
-        
+
         market.portfolio("Aunnop");
-        */
     }
     
 }

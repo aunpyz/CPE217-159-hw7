@@ -24,22 +24,66 @@ public class Heap {
         timeCounter = 0;
     }
     public Node top(){
-        return null; // FIX THIS
+        return arr[1];
     }
     
     public void push(Node node){
         // time stamp
-        node.timestamp = 0; // FIX THIS
-        
-        // Do something
+        node.timestamp = timeCounter++;
+        int pFactor = back;
+        arr[back++] = node;
         // Push new node at the end then sift (percolate) up
+
+        //compare a price between its parent and itself
+        //first condition is to prevent the errors
+        while(pFactor > 1 && arr[pFactor].compare(arr[pFactor/2]))
+        {
+            //till the iterator reach to 1 or its parent's price is lesser
+            swap(pFactor, pFactor/=2);
+        }
     }
     public Node pop(){
-        // DO SOMETHING
         // 1. mark the root for return
+        Node beReturned = arr[1];
         // 2. Replace the last node with the root
+        if(back == 2)
+        {
+            //means that the market has 1 buyerQueue
+            //must set  arr[1] to null
+            arr[--back] = null;
+        }
+        else
+        {
+            arr[1] = arr[--back];
+        }
         // 3. Sift (percolate) down
-        return arr[1]; // You may have to fix this line
+        int pFactor = 1;
+
+        //prevent to execute if the heap has 1 node after popped
+        while(pFactor <= back-1)
+        {
+            //run till the end
+            int cFactor;
+
+            //comparing its subnodes
+            if(pFactor*2+1 <= back-1 && arr[pFactor*2+1] != null)
+            {
+                cFactor = arr[pFactor*2].compare(arr[pFactor*2+1])?pFactor*2:pFactor*2+1;
+            }
+            else if(pFactor*2 <= back-1 && arr[pFactor*2] != null)
+                cFactor = pFactor*2;
+            else
+                break;
+
+            if(arr[cFactor].compare(arr[pFactor]))
+            {
+                swap(cFactor, pFactor);
+                pFactor = cFactor;
+            }
+            else
+                break;
+        }
+        return beReturned;
     }
 
     // Optional: If you do not know what this function does, you do not have to use it
