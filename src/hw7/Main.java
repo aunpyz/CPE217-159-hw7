@@ -118,23 +118,23 @@ public class Main {
         market.submitSellOrder("Aunnop", "PTT", 3, 240);
         market.submitSellOrder("Aunnop", "PTT", 4, 220);
 
-        market.quote("PTT");
-        market.showStockOwnership();
-
+//        market.quote("PTT");
+//        market.showStockOwnership();
+//
         market.portfolio("Aunnop");
 
-        market.submitBuyOrder("Darunphop", "PTT", 20, 150);
-        market.submitBuyOrder("Darunphop", "PTT", 20, 100);
-        market.submitBuyOrder("Darunphop", "PTT", 10, 50);
-
-        market.submitSellOrder("Suttawee", "PTT", 10, 125);
-        market.submitSellOrder("Supakarn", "PTT", 10, 75);
-        market.submitSellOrder("Tanin", "PTT", 15, 75);
-        market.submitSellOrder("Theerapat", "PTT", 15, 75);
-
-        market.quote("PTT");
-
-        market.portfolio("Aunnop");
+//        market.submitBuyOrder("Darunphop", "PTT", 20, 150);
+//        market.submitBuyOrder("Darunphop", "PTT", 20, 100);
+//        market.submitBuyOrder("Darunphop", "PTT", 10, 50);
+//
+//        market.submitSellOrder("Suttawee", "PTT", 10, 125);
+//        market.submitSellOrder("Supakarn", "PTT", 10, 75);
+//        market.submitSellOrder("Tanin", "PTT", 15, 75);
+//        market.submitSellOrder("Theerapat", "PTT", 15, 75);
+//
+//        market.quote("PTT");
+//
+//        market.portfolio("Aunnop");
     }
     
 }

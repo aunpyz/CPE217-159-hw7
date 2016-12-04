@@ -66,15 +66,24 @@ public class Heap {
             int cFactor;
 
             //comparing its subnodes
+            //the first condition is to prevent when we going down and the factor*2+1 or factor*2 is greater then back
+            //it'll have either Exception or wrong comparing result
             if(pFactor*2+1 <= back-1 && arr[pFactor*2+1] != null)
             {
+                //if it has right subnode; it is surely that if it has right subnode it'll have left subnode
+                //from the definition of complete binary tree
+                //and compare them both to see if the on has more priority, set the index as its
                 cFactor = arr[pFactor*2].compare(arr[pFactor*2+1])?pFactor*2:pFactor*2+1;
             }
             else if(pFactor*2 <= back-1 && arr[pFactor*2] != null)
+            {
+                //comparing must be se to its left subnode if exists
                 cFactor = pFactor*2;
+            }
             else
                 break;
 
+            //comparing the set index with the node itself
             if(arr[cFactor].compare(arr[pFactor]))
             {
                 swap(cFactor, pFactor);
